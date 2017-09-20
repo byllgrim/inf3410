@@ -3,3 +3,8 @@
 *.fls
 *.log
 *.pdf
+*.idx
+*.ilg
+*.ind
+*.out
+*.toc
