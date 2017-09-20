@@ -3,17 +3,17 @@ The course covers (parts of) the \addindex{chapters}:
 \begin{description}
   \item [Ch 5] \addindex{MOSFET} \\
                5.1 Device structure and physical operation \\
-               5.2 Current-voltage characteristics \\
-               5.3 MOSFET circuits at DC \\
+               5.2 \addindex{Current-voltage characteristics} \\
+               5.3 MOSFET circuits at \addindex{DC} \\
                TODO only these?
   \item [Ch 6] \addindex{BJT} \\
                6.2 Current-voltage characteristics \\
-               6.3 BJT circuits at DC \\
+               6.3 \addindex{BJT} circuits at DC \\
                TODO only these? \\
                TODO fuck BJT?
   \item [Ch 7] \addindex{Transistor Amplifiers} \\
                7.3 Basic configurations \\
-               7.4 Biasing \\
+               7.4 \addindex{Biasing} \\
                7.5 Discrete-circuit amplifiers \\
                7.6 Doesn't exist. Wtf dr. proffesor \\
                TODO only these?
@@ -36,7 +36,7 @@ The course covers (parts of) the \addindex{chapters}:
                15.1 Implications of technology scaling \\
                15.2 Digital IC technologies, logic-circuit families,
                     design methodologies \\
-               15.3 Pseudo-NMOS logic circuits \\
+               15.3 \addindex{Pseudo-NMOS} logic circuits \\
                15.4 Pass-transistor logic circuits \\
                TODO only these?
 \end{description}
@@ -49,6 +49,67 @@ The books chapter covers:
   \item How MOS \addindex{transistors} work and are physically build
   \item How current through one \addindex{terminal} is controlled by voltage
         over two other terminals.
-  \item Designing and analyzing circuits with MOSFET, resistors and voltage
-        sources.
+  \item Designing and analyzing circuits with MOSFET, resistors and dc sources.
+\end{itemize}
+
+\paragraph{Ch 6 - BJT} \hfill \\
+The books chapter covers:
+\begin{itemize}
+  \item How BJTs work and are physically built.
+  \item How voltage on two terminals control current in the third terminal.
+  \item Designing and analyzing circuits with BJT, resistors and dc sources.
+\end{itemize}
+
+\paragraph{Ch 7 - Transistor Amplifiers} \hfill \\
+The books chapter covers:
+\begin{itemize}
+  \item How to make an \addindex{amplifier} with MOSFET or BJT
+  \item Making \addindex{linear amplifiers} from non-linear transistors
+  \item Using \addindex{equivalent circuits} to model
+        \addindex{linear operation} of transistor around bias point
+  \item Three basic ways to make amplifiers from transistors
+  \item Practical transistor amplifier circuits from
+        \addindex{discrete components}
+\end{itemize}
+
+\paragraph{Ch 8 - } \hfill \\
+The books chapter covers:
+\begin{itemize}
+  \item How IC \addindex{philosophy} differs from
+        \addindex{discrete-circuit} design
+  \item \addindex{Biasing} IC amps with \addindex{current sources} and
+        replicating reference currents with current mirrors.
+  \item Basic gain cells: \addindex{CS} and \addindex{CE} amps with
+        current-source loads
+  \item CG and CB amps as \addindex{current buffers}
+  \item Increasing gain with \addindex{cascoding}
+  \item Designing and analyzins cascode amps and
+        \addindex{cascode current sources}
+  \item \emph{Ingenious} techniques improving current mirrors
+  \item Multi-stage amps with multiple transistors
+\end{itemize}
+
+\paragraph{Ch 9 - } \hfill \\
+The books chapter covers:
+\begin{itemize}
+  \item MOS differential amps: rejecting \addindex{common-mode} noise,
+        amplifying \addindex{differential signals}
+  \item Designing and analyzing MOS \addindex{differential amps}
+  \item Differential amps with: \addindex{passive resistive loads}, 
+  \item Popular and \emph{ingenious} differential amp with current-mirror load
+  \item Structure, analysis and design of \addindex{multi-stage} amps in cascade
+\end{itemize}
+
+\paragraph{Ch 15 - } \hfill \\
+The books chapter covers:
+\begin{itemize}
+  \item Technology scaling: Moores law and deep-submicron
+  \item Why CMOS is dominant
+  \item Pseudo nMOS: Single \addindex{pMOS} \addindex{PUL}
+        (\addindex{pull-up network}) and high fan-in gates.
+  \item \addindex{Pass-transistor logic}
+  \item \addindex{Transmission gate} from parallel pMOS and nMOS
+  \item \addindex{Dynamic logic}: Replacing pull-up network with spooky shit
+  \item \addindex{Emitter-coupled logic}: fast ass shit
+  \item \addindex{BiCMOS}: Combining MOSFET and BJT
 \end{itemize}
