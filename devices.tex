@@ -1,0 +1,48 @@
+\documentclass[twocolumn]{article}
+
+\usepackage{style}
+
+\begin{document}
+  \title{inf3410 - Devices}
+  \author{Robin A. T. Pedersen}
+  \maketitle
+
+  TODO rename equations.tex?
+
+  \section{Capitilization Notation}
+    \begin{align}
+      v_{in} &\implies \text{has only AC (small signal)} \\
+      v_{IN} &\implies \text{has both DC + AC} \\
+      V_{IN} &\implies \text{is a pure DC signal} \\
+      V_{in} &\implies \text{wtf is this?}
+    \end{align}
+  \section{CMOS FET}
+    TODO cheatsheet of nMOS/pMOS regions, equations, iD(vSD).
+    TODO chapter 5.1 - 5.2.
+
+    \paragraph{pMOS} \hfill \\
+      Cutoff (no channel):
+        $$v_{SG} < |V_{tp}| \quad\implies\quad i_D \approx 0$$
+      Overdrive Voltage:
+        $$|v_{OV}| = v_{SG} - |V_{tp}|$$
+      Triode Region:
+        $$v_{DG} > |V_{tp}| \quad\Leftrightarrow\quad v_{SD} < |v_{OV}|$$
+      Triode Current:
+        $$i_D = k_p' \left( \frac{W}{L} \right)
+                     \left( |v_{OV}| - \frac{1}{2} v_{SD} \right) v_{SD}$$
+      Saturation Region:
+        $$v_{DG} \leq |V_{tp}| \quad\Leftrightarrow\quad v_{SD} \geq |v_{OV}|$$
+      Saturation Current:
+        $$i_D = \frac{1}{2} k_p' \left( \frac{W}{L} \right) v_{OV}^2$$
+    \paragraph{nMOS} \hfill \\
+      It's flipped of pMOS $\ddot\smile$. Much simpler! Haha.
+    \paragraph{EKV model} \hfill \\
+      $$i_D = i_F - i_R$$
+      $$i_{F(R)} = I_S \cdot
+                   \ln \left[ 1 + e^{\frac{v_G - V_{tn} - nv_{S(D)}}{nV_T}}
+                       \right] ^2
+                   (1 + \lambda v_{DS})$$
+      TODO $I_S$?
+    \paragraph{Channel Length Modulation} \hfill \\
+      TODO
+\end{document}
