@@ -20,6 +20,17 @@
     TODO cheatsheet of nMOS/pMOS regions, equations, iD(vSD).
     TODO chapter 5.1 - 5.2.
 
+    \paragraph{Resistance} \hfill \\
+      Triode region (small $v_{DS}$):
+        $$r_{DS} = \frac{1}{g_{DS}}$$
+        $$g_{DS} = k_n v_{OV}$$
+        $$k_n = k_n' \cdot \frac{W}{L}$$
+        $$v_{OV} = v_{GS} - V_t$$
+      Active region:
+        $$r_o = \frac{1}{\lambda I_D}$$
+        $$\frac{1}{r_0} = \frac{\Delta I_D}{\Delta v_{DS}},
+          \qquad v_{DS} > v_{OV}$$
+
     \paragraph{pMOS} \hfill \\
       Cutoff (no channel):
         $$v_{SG} < |V_{tp}| \quad\implies\quad i_D \approx 0$$
@@ -44,7 +55,10 @@
                    (1 + \lambda v_{DS})$$
       TODO $I_S$?
     \paragraph{Channel Length Modulation} \hfill \\
-      TODO $\cdot (1 + \lambda v_{DS}$?
+      TODO $... \cdot (1 + \lambda v_{DS}$?
+
+      $$V_A = \frac{1}{\lambda}$$
+      $$V_A = ?V_A' \cdot L?$$
   \section{Thevenin Circuits}
     \paragraph{Thevenin Resistance} \hfill \\
       Short-circuit all voltage sources.
