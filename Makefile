@@ -1,4 +1,4 @@
-all: chapters lectures devices
+all: chapters lectures formulas
 
 chapters:
 	latexmk -pdf chapters.tex
@@ -6,7 +6,7 @@ chapters:
 lectures:
 	latexmk -pdf lectures.tex
 
-devices:
-	latexmk -pdf devices.tex
+formulas:
+	latexmk -pdf formulas.tex
 
 # TODO merge all documents to a motherment!

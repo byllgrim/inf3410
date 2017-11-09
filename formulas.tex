@@ -3,7 +3,7 @@
 \usepackage{style}
 
 \begin{document}
-  \title{inf3410 - Devices}
+  \title{inf3410 - Formulas}
   \author{Robin A. T. Pedersen}
   \maketitle
 
@@ -44,5 +44,33 @@
                    (1 + \lambda v_{DS})$$
       TODO $I_S$?
     \paragraph{Channel Length Modulation} \hfill \\
-      TODO
+      TODO $\cdot (1 + \lambda v_{DS}$?
+  \section{Thevenin Circuits}
+    \paragraph{Thevenin Resistance} \hfill \\
+      Short-circuit all voltage sources.
+      Then, calculate the resistance $R_{Th}$ from the output terminal relative
+      to ground.
+      You calculate parallell and series resistors just like you normally
+     calculate resistance.
+    \paragraph{Thevenin Voltage} \hfill \\
+      Short-circuit all voltage sources, except one.
+      Then calculate the voltage on the output terminal.
+      Do this for all of the voltage sources.
+      The thevenin voltage $V_{Th}$ is the sum of all the voltages you found.
+      $$V_{Th} = V_1 + V_2 + ...$$
+    \paragraph{Intermediate Thevenin Voltages} \hfill \\
+      Find a simple, innermost, small part of the circuit.
+      Calculate the thevenin voltage for this node (usually a simple voltage
+      divider).
+      Use that to find the voltage of the next node.
+      NB! For the next node, be carefull to use thevenin resistances in
+      your calculations.
+
+      TODO write as enumeration.
+  \section{Common Mode Rejection Ratio (CMRR)}
+    $$v_{o,max} = A_d \cdot v_{id,max} + A_{cm} \cdot v_{cm,max}$$
+    $$A_{cm} = \frac{A_d}{\text{CMRR}}$$
+    $$A_{cm,dB} = A_{d,dB} - \text{CMRR}_{dB}$$
+    $$V_{cm,max} = \left[\max(V_+) + \max(V_-) \right] \cdot \frac{1}{2}$$
+    $$V_{cm,min} = \left[\min(V_+) + \min(V_-) \right] \cdot \frac{1}{2}$$
 \end{document}
