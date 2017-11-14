@@ -60,7 +60,7 @@
       TODO $... \cdot (1 + \lambda v_{DS}$?
 
       $$V_A = \frac{1}{\lambda}$$
-      $$V_A = ?V_A' \cdot L?$$
+      $$V_A = V_A' \cdot L?$$
   \section{Thevenin Circuits}
     \paragraph{Thevenin Resistance} \hfill \\
       Short-circuit all voltage sources.
@@ -98,4 +98,16 @@
     $$I_D = \frac{1}{2} k_n v_{OV}^2 = \frac{V_{DD} - V_{GS}}{R} = I_{REF}$$
     For any following nMOS connected Gate-To-Gate, this will get the same
     current as long as it is in saturation (BIG enough $v_{DS}$).
+
+    \paragraph{Relation to width and length} \hfill \\
+    The two transistors receives to same gate voltage.
+    $$I_1 = I_{REF} = \frac{1}{1} k_n' \frac{W_1}{L_1} v_{OV}^1
+      ,\quad
+      I_2 = \frac{1}{2} k_n' \frac{W_2}{L_2} v_{OV}^2
+      $$
+    $$\implies \frac{I_2}{I_{REF}} = \frac{(W/L)_2}{(W/L)_1}$$
+  \section{Intrinsic Gain}
+    The maximum attainable gain in a CS amp.
+    $$A_0 = \text{Intrinsic Gain} = g_m r_o = 2V_A / V_{OV}$$
+    TODO
 \end{document}
