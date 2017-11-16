@@ -115,4 +115,29 @@
     $$A = g_m \cdot (r_o || R_D)$$
 
     TODO more info?
+  \section{Current Source}
+    From $V_{DD}$, through a resistor, through a nMOS to $GND$.
+    The Gate and Drain are connected.
+    The Gate can be connected to the Gate of another nMOS, to clone the current.
+
+    \paragraph{Current Source Load} \hfill \\
+      In a CS amp, replace $R_D$ with a pMOS (the current source).
+  \section{Bode Plot}
+    $(\tau s + 1)$ is $0dB$ until $\omega_0 = \frac{1}{\tau}$, then falls/grows
+    by 20dB/dec.
+    $$\frac{1}{\tau s + 1} = \text{Flat, then falls} = \text{Low-Pass Filter}$$
+    $$\frac{1}{(\tau s + 1)^2} = \text{Flat, then falls (by 40dB/dec!)}$$
+    $$\frac{\tau s + 1}{1} = \text{Flat, then grows}$$
+
+    $(\tau s)$ always falls/grows, crosses $0dB$ at $\omega_o = \frac{1}{\tau}$.
+    $$\frac{1}{\tau s} = \text{Always falls}$$
+    $$\frac{\tau s}{1} = \text{Always grows}$$
+
+    Amplification:
+    $$\frac{100}{1} = \text{40dB amplification everywhere}$$
+  \section{Logarithm}
+    $$20 \cdot \log_{10}(A) = A_{dB}$$
+    $$10^{\frac{A_{dB}}{20}} = A$$
+
+  TODO alphabetical order of sections?
 \end{document}
