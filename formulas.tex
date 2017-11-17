@@ -11,13 +11,14 @@
 
   Caution! Some formulas may have preconditions not mentioned here.
 
-  \section{Capitilization Notation}
+  \section{Capitilization Convention}
     \begin{align}
       v_{in} &\implies \text{has only AC (small signal)} \\
       v_{IN} &\implies \text{has both DC + AC} \\
       V_{IN} &\implies \text{is a pure DC signal} \\
       V_{in} &\implies \text{wtf is this?}
     \end{align}
+
   \section{CMOS FET}
     TODO cheatsheet of nMOS/pMOS regions, equations, iD(vSD).
     TODO chapter 5.1 - 5.2.
@@ -61,6 +62,7 @@
 
       $$V_A = \frac{1}{\lambda}$$
       $$V_A = V_A' \cdot L?$$
+
   \section{Thevenin Circuits}
     \paragraph{Thevenin Resistance} \hfill \\
       Short-circuit all voltage sources.
@@ -83,12 +85,14 @@
       your calculations.
 
       TODO write as enumeration.
+
   \section{Common Mode Rejection Ratio (CMRR)}
     $$v_{o,max} = A_d \cdot v_{id,max} + A_{cm} \cdot v_{cm,max}$$
     $$A_{cm} = \frac{A_d}{\text{CMRR}}$$
     $$A_{cm,dB} = A_{d,dB} - \text{CMRR}_{dB}$$
     $$V_{cm,max} = \left[\max(V_+) + \max(V_-) \right] \cdot \frac{1}{2}$$
     $$V_{cm,min} = \left[\min(V_+) + \min(V_-) \right] \cdot \frac{1}{2}$$
+
   \section{Current Mirror}
     From $V_{DD}$ through $R$ we get to the nMOS.
     $$v_{DS} = V_{DD} - V_R$$
@@ -106,15 +110,18 @@
       I_2 = \frac{1}{2} k_n' \frac{W_2}{L_2} v_{OV}^2
       $$
     $$\implies \frac{I_2}{I_{REF}} = \frac{(W/L)_2}{(W/L)_1}$$
+
   \section{Intrinsic Gain}
     The maximum attainable gain in a CS amp.
     $$A_0 = \text{Intrinsic Gain} = g_m r_o = 2V_A / V_{OV}$$
     Combined with $i_{D,sat}$.
     $$A_0 = \frac{V_A' \sqrt{2 k_n' WL}}{\sqrt{i_D}}$$
+
   \section{Common Source Amp}
     $$A = g_m \cdot (r_o || R_D)$$
 
     TODO more info?
+
   \section{Current Source}
     From $V_{DD}$, through a resistor, through a nMOS to $GND$.
     The Gate and Drain are connected.
@@ -122,6 +129,7 @@
 
     \paragraph{Current Source Load} \hfill \\
       In a CS amp, replace $R_D$ with a pMOS (the current source).
+
   \section{Bode Plot}
     $(\tau s + 1)$ is $0dB$ until $\omega_0 = \frac{1}{\tau}$, then falls/grows
     by 20dB/dec.
@@ -139,9 +147,13 @@
 
     Amplification:
     $$\frac{100}{1} = \text{40dB amplification everywhere}$$
+
   \section{Logarithm}
     $$20 \cdot \log_{10}(A) = A_{dB}$$
     $$10^{\frac{A_{dB}}{20}} = A$$
+
+  \section{Weak Inversion}
+    $$I_d = I_S \cdot e^{\frac{V_{gs}}{n V_T}}$$
 
   TODO alphabetical order of sections?
 \end{document}
