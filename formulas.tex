@@ -155,5 +155,25 @@
   \section{Weak Inversion}
     $$I_d = I_S \cdot e^{\frac{V_{gs}}{n V_T}}$$
 
+    TODO more info?
+
+  \section{Open-Circuit Time-Constant Analysis}
+    Short-circuit all voltage sources (TODO signal sources?).
+
+    \paragraph{Capacitor No.1 ($C_1$)} \hfill \\
+      Replace $C_1$ with a voltage source $V_X$.
+      Rip out all other caps (open-circuit).
+  
+      Find the resistance $R_X$ \emph{seen by} your cap $C_1$.
+  
+      Congratz. You found the first time constant.
+      $$\tau_1 = R_{X1} \cdot C_1$$
+
+    \paragraph{Capacitor No.2} \hfill \\
+      Repeat the same procedure for $C_2$.
+
+    \paragraph{Result} \hfill \\
+      $$\omega_0 = \frac{1}{\tau_1 + \tau_2 + ... + \tau_n}$$
+
   TODO alphabetical order of sections?
 \end{document}
