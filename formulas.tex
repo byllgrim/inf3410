@@ -24,13 +24,21 @@
     TODO chapter 5.1 - 5.2.
 
     \paragraph{Resistance} \hfill \\
-      Triode region (small $v_{DS}$):
+      Triode/Linear region (\emph{very} small $v_{DS}$):
         $$r_{DS} = \frac{1}{g_{DS}}$$
         $$g_{DS} = k_n v_{OV}$$
         $$k_n = k_n' \cdot \frac{W}{L}$$
         $$v_{OV} = v_{GS} - V_t$$
+      Triode region ($v_{DS} < v_{OV}$):
+        $$g_m = \text{slope?}
+          = ?\frac{\delta i_D}{\delta v_{DS}}
+          = ? k_n (v_{OV} - v_{DS})
+          $$
       Active region:
-        $$r_o = \frac{1}{\lambda I_D}$$
+        $$r_o = \frac{1}{\lambda I_D'}
+          ,\quad
+          i_D' = \frac{1}{2} k_n v_{OV}^2
+          $$
         $$\frac{1}{r_0} = \frac{\Delta I_D}{\Delta v_{DS}},
           \qquad v_{DS} > v_{OV}$$
 
@@ -50,6 +58,9 @@
         $$i_D = \frac{1}{2} k_p' \left( \frac{W}{L} \right) v_{OV}^2$$
     \paragraph{nMOS} \hfill \\
       It's flipped of pMOS $\ddot\smile$. Much simpler! Haha.
+
+      Very low triode region:
+        $$i_D = [k_n v_{OV}] v_{DS}$$
     \paragraph{EKV model} \hfill \\
       $$i_D = i_F - i_R$$
       $$i_{F(R)} = I_S \cdot
