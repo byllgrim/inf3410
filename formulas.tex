@@ -23,7 +23,7 @@
     TODO cheatsheet of nMOS/pMOS regions, equations, iD(vSD).
     TODO chapter 5.1 - 5.2.
 
-    \paragraph{Resistance} \hfill \\
+    \paragraph{Resistance and Transconductance} \hfill \\
       Triode/Linear region (\emph{very} small $v_{DS}$):
         $$r_{DS} = \frac{1}{g_{DS}}$$
         $$g_{DS} = k_n v_{OV}$$
@@ -35,12 +35,8 @@
           = ? k_n (v_{OV} - v_{DS})
           $$
       Active region:
-        $$r_o = \frac{1}{\lambda I_D'}
-          ,\quad
-          i_D' = \frac{1}{2} k_n v_{OV}^2
-          $$
-        $$\frac{1}{r_0} = \frac{\Delta I_D}{\Delta v_{DS}},
-          \qquad v_{DS} > v_{OV}$$
+        $$g_m = \frac{\delta I_D}{\delta V_{GS}} = \frac{2 I_D}{V_{ov}}$$
+        $$r_o = \frac{1}{\lambda I_D}$$
 
     \paragraph{pMOS} \hfill \\
       Cutoff (no channel):
