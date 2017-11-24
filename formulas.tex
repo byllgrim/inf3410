@@ -78,7 +78,7 @@
                    (1 + \lambda v_{DS})$$
       TODO $I_S$?
     \paragraph{Channel Length Modulation} \hfill \\
-      TODO $... \cdot (1 + \lambda v_{DS}$?
+      TODO $i_D \to i_D \cdot (1 + \lambda v_{DS}$?
 
       $$V_A = \frac{1}{\lambda}$$
       $$V_A = V_A' \cdot L?$$
@@ -130,7 +130,9 @@
       ,\quad
       I_2 = \frac{1}{2} k_n' \frac{W_2}{L_2} v_{OV}^2
       $$
-    $$\implies \frac{I_2}{I_{REF}} = \frac{(W/L)_2}{(W/L)_1}$$
+    $$x \cdot I_{REF} = I_2
+      \implies \frac{I_2}{I_{REF}} = \frac{(W/L)_2}{(W/L)_1}
+      $$
 
   \section{Intrinsic Gain}
     The maximum attainable gain in a CS amp.
@@ -143,10 +145,23 @@
     E.g.:
     $$V_o = R_{tot} \cdot (-g_m \cdot V_i)$$
 
-  \section{Common Source Amp}
-    $$A = g_m \cdot (r_o || R_D)$$
+  \section{Basic Amplifiers}
+    \paragraph{Common Source Amp} \hfill \\
+      $$A = g_m \cdot (r_o || R_D)$$
+      TODO more info?
 
-    TODO more info?
+    \paragraph{Characteristics summary} \hfill \\
+      This table assumes $r_o \gg R_D$.
+      \begin{tabular}{|l|l|l|l|}
+        \hline
+        Type       & $R_{in}$        & $A_{vo}$                 & $R_o$ \\
+        \hline
+        CS         & $\infty$        & $-g_m R_D$               & $R_D$ \\
+        CS w/$R_S$ & $\infty$        & $-g_mR_D / (1 + g_mR_S)$ & $R_D$ \\
+        CG         & $\frac{1}{g_m}$ & $g_m R_D$                & $R_D$ \\
+        CD         & $\infty$        & 1                   & $\frac{1}{g_m}$ \\
+        \hline
+      \end{tabular}
 
   \section{Current Source}
     From $V_{DD}$, through a resistor, through a nMOS to $GND$.
@@ -208,6 +223,13 @@
 
   \section{Operational Transconductance Amplifier (OTA)}
     $$A = G_{MA} \cdot r_{out}$$
+
+  \section{Small Signal Equivalent Circuits}
+    \begin{enumerate}
+      \item Short-circuit all voltage sources?
+      \item Open-circuit all current sources
+      \item Substitute transistors with small signal equivalents
+    \end{enumerate}
 
   TODO alphabetical order of sections?
 \end{document}
