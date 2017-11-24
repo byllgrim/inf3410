@@ -5,11 +5,11 @@
 \renewcommand{\thesection}{}
 
 \begin{document}
-  \title{inf3410 - Formulas}
+  \title{inf3410 - Formulas (and other scrap)}
   \author{Robin A. T. Pedersen}
   \maketitle
 
-  Caution! Some formulas may have preconditions not mentioned here.
+  Caution! Some formulas may have preconditions not explicitly mentioned.
 
   \section{Capitilization Convention}
     $$i_D = I_D + i_d$$
@@ -30,10 +30,14 @@
         $$g_{DS} = \frac{d i_D}{d v_{DS}} = \text{conductance}
           = \frac{1}{r_{DS}}$$
       Triode/Linear region (\emph{very} small $v_{DS}$):
-        $$r_{DS} = \frac{1}{g_{DS}}$$
-        $$g_{DS} = k_n v_{OV}$$
-        $$k_n = k_n' \cdot \frac{W}{L}$$
-        $$v_{OV} = v_{GS} - V_t$$
+        $$r_{DS} = \frac{1}{g_{DS}}
+          ,\quad
+          g_{DS} = k_n v_{OV}
+          $$
+        $$k_n = k_n' \cdot \frac{W}{L}
+          ,\quad
+          v_{OV} = v_{GS} - V_t
+          $$
       Triode region ($v_{DS} < v_{OV}$):
         $$g_m = \text{slope?}
           = ?\frac{\delta i_D}{\delta v_{DS}}
@@ -46,8 +50,10 @@
         $$g_m = k_n \cdot v_{OV}$$
         $$r_o = \frac{1}{\lambda I_D}$$
       Weak inversion (active):
-        $$r_o = \frac{1}{\lambda i_D}$$
-        $$g_m = \frac{i_D}{n V_T}$$
+        $$r_o = \frac{1}{\lambda i_D}
+          ,\quad
+          g_m = \frac{i_D}{n V_T}
+          $$
       Weak inversion (triode):
         $$r_{ds} = \frac{V_T}{i_D}$$
 
@@ -78,10 +84,8 @@
                    (1 + \lambda v_{DS})$$
       TODO $I_S$?
     \paragraph{Channel Length Modulation} \hfill \\
-      TODO $i_D \to i_D \cdot (1 + \lambda v_{DS}$?
-
-      $$V_A = \frac{1}{\lambda}$$
-      $$V_A = V_A' \cdot L?$$
+      $$i_D \to i_D \cdot (1 + \lambda v_{DS})$$
+      $$V_A = \frac{1}{\lambda} = V_A' \cdot L?$$
 
   \section{Thevenin Circuits}
     \paragraph{Thevenin Resistance} \hfill \\
@@ -134,6 +138,13 @@
       \implies \frac{I_2}{I_{REF}} = \frac{(W/L)_2}{(W/L)_1}
       $$
 
+    \paragraph{Current Amplifier}
+      $$A_{is} = \frac{i_o}{i_i}
+        = \frac{g_{m2} v_{gs}}{i_i}
+        \approx \frac{g_{m2} i_i/g_{m1}}{i_i}
+        $$
+      $$\implies A_{is} = \frac{g_{m2}}{g_{m1}} = \frac{(W/L)_2}{(W/L)_1}$$
+
   \section{Intrinsic Gain}
     The maximum attainable gain in a CS amp.
     $$A_0 = \text{Intrinsic Gain} = g_m r_o = 2V_A / V_{OV}$$
@@ -149,6 +160,30 @@
     \paragraph{Common Source Amp} \hfill \\
       $$A = g_m \cdot (r_o || R_D)$$
       TODO more info?
+
+    \paragraph{CS Source Degeneration} \hfill \\
+      $$R_o = r_o \quad\to\quad R_o = r_o(1 + g_m R_S)$$
+      $$A_V \approx g_m r_o \frac{R_L}{R_L + (1 + g_mR_S)r_o}$$
+
+    \paragraph{Cascode Amplifier} \hfill \\
+      From $V_{DD}$ through a load, past the output, we find $Q_2$ and
+      then $Q_1$.
+      $$A_0
+        = g_{m1}r_{o1} \cdot g_{m2}r_{o2}
+        = \text{intrinsic combined gain}
+        $$
+
+      For transistor current-source load:
+      $$A_v = -g_{m1} (R_o || R_L) = -g_{m1} (g_{m2}r_{o2}r_{o1} || r_{o3})$$
+      $$R_L \ll R_o \quad\implies\quad A_v \approx -g_{m1}r_{o3}$$
+
+      Cascode current-sources:
+      ... has higher resistance and can remediate the loss of gain
+      described above.
+      $$A_v = -g_{m1}[R_{o,down} || R_{o,up}]
+        = -g_{m1} \{ [(g_{m2}r_{o2})r_{o1}] || [(g_{m3}r_{o3})r_{o4}] \}
+        $$
+      $$A_v = -\frac{1}{2} A_0^2 \text{(when all Qs are equal)}$$
 
     \paragraph{Characteristics summary} \hfill \\
       This table assumes $r_o \gg R_D$.
@@ -172,8 +207,8 @@
       In a CS amp, replace $R_D$ with a pMOS (the current source).
 
   \section{Bode Plot}
-    $(\tau s + 1)$ is $0dB$ until $\omega_0 = \frac{1}{\tau}$, then falls/grows
-    by 20dB/dec.
+    $(\tau s + 1)$ is $0dB$ until $\omega_i = \frac{1}{\tau_i}$, then
+    falls/grows by 20dB/dec.
     $$\frac{1}{\tau s + 1} = \text{Flat, then falls} = \text{Low-Pass Filter}$$
     $$\frac{1}{(\tau s + 1)^2} = \text{Flat, then falls (by 40dB/dec!)}$$
     $$\frac{\tau s + 1}{1} = \text{Flat, then grows}$$
@@ -188,6 +223,17 @@
 
     Amplification:
     $$\frac{100}{1} = \text{40dB amplification everywhere}$$
+
+  \section{Transfer Function}
+    Impedance (resistance):
+    $$Z_R = R
+      ,\quad Z_C = \frac{1}{Cs}
+      ,\quad Z_L = Ls
+      $$
+
+    Root Form (poles and zeros):
+      $$H(s) = A \cdot \frac{(1 + s/z_1)(1 + s/z_2)...(1 + s/z_m)}
+                            {(1 + s/p_1)(1 + s/p_2)...(1 + s/p_n)}$$
 
   \section{Logarithm}
     $$20 \cdot \log_{10}(A) = A_{dB}$$
